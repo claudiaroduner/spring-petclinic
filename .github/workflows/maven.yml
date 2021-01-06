@@ -28,7 +28,7 @@ jobs:
     - name: Publish Test Report
       uses: scacap/action-surefire-report@v1
       with:
-        github_token: ${{ secrets.MY_GITHUB_TOKEN }}  
+        github_token: ${{ secrets.GITHUB_TOKEN }}  
         
     - name: Create executable Jarfile
       run: mvn -B package -Dmaven.test.skip=true --file pom.xml
